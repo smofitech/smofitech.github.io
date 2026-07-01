@@ -1,0 +1,395 @@
+/* ==========================================================================
+   DropLocal Privacy Policy - Self-contained Stylesheet
+   ========================================================================== */
+
+:root {
+  --primary: #FFB7B2;         /* Pink pastel principal */
+  --primary-light: #FFE5E5;   /* Pink very light */
+  --primary-dark: #E5989B;    /* Pink dark soft */
+  --accent: #B5C9DF;          /* Blue pastel soft */
+  --accent-light: #E2ECF7;     /* Blue pastel ultra light */
+  --background: #FDF0F0;      /* Background blush pastel soft */
+  --surface: #FFF7F7;         /* Surface blush ultra clear */
+  --surface-high: #FCDADA;    /* Container pink pastel */
+  --card: #FFFDFD;            /* Cards white/blush */
+  --border: #F5D6D6;          /* Border pink soft */
+  --border-width: 2px;
+  --border-width-thick: 2.5px;
+  
+  /* State Colors */
+  --success: #B5EAD7;         /* Mint green pastel */
+  --error: #FF9AA2;           /* Coral red pastel */
+  --warning: #FFDAC1;         /* Peach pastel */
+  
+  /* Text Colors */
+  --text-primary: #5C4E4E;    /* Dark brown/gray soft */
+  --text-secondary: #8E7D7D;  /* Secondary text */
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(229, 152, 155, 0.08);
+  --shadow-md: 0 12px 24px rgba(229, 152, 155, 0.12);
+  
+  /* Font Families */
+  --font-main: 'Fredoka', system-ui, -apple-system, sans-serif;
+  
+  /* Transition durations */
+  --transition-fast: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header & Navbar */
+.navbar-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.app-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Privacy Hero Section */
+.privacy-hero {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--background) 50%, var(--accent-light) 100%);
+  padding: 8rem 0 3rem;
+  text-align: center;
+  border-bottom: var(--border-width) solid var(--border);
+}
+
+.privacy-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.privacy-hero .privacy-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-weight: 500;
+}
+
+.privacy-hero .last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card);
+  border: var(--border-width) solid var(--border);
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Language Switcher */
+.privacy-lang-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.privacy-lang-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 16px;
+  border: var(--border-width) solid var(--border);
+  background: var(--card);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.privacy-lang-btn:hover,
+.privacy-lang-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Privacy Content Area */
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.privacy-highlight {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+  border: var(--border-width) solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.privacy-highlight i {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.privacy-highlight p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.privacy-section {
+  background: var(--card);
+  border: var(--border-width) solid var(--border);
+  border-radius: 24px;
+  padding: 2rem 2.25rem;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.privacy-section:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.privacy-section .section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.privacy-section .section-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.privacy-section .section-icon.pink { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+.privacy-section .section-icon.blue { background: linear-gradient(135deg, var(--accent), #97b4d0); }
+.privacy-section .section-icon.green { background: linear-gradient(135deg, var(--success), #8dd3b8); }
+.privacy-section .section-icon.peach { background: linear-gradient(135deg, var(--warning), #f0c4a0); }
+.privacy-section .section-icon.coral { background: linear-gradient(135deg, var(--error), #e07a82); }
+
+.privacy-section h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.privacy-section p,
+.privacy-section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.privacy-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.75rem;
+}
+
+.privacy-section ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.privacy-section a {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.privacy-section a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Box */
+.contact-box {
+  background: var(--card);
+  border: var(--border-width-thick) solid var(--primary);
+  border-radius: 24px;
+  padding: 2.25rem;
+  text-align: center;
+  margin-top: 3rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-box p {
+  color: var(--text-secondary);
+}
+
+.contact-box a {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer-area {
+  border-top: var(--border-width) solid var(--border);
+  padding: 2rem 0;
+  background: var(--card);
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.copyright {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.badge-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-badge {
+  background-color: var(--background);
+  border: var(--border-width) solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-badge i {
+  color: var(--primary-dark);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .privacy-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .privacy-section {
+    padding: 1.5rem 1.75rem;
+  }
+  
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .badge-row {
+    justify-content: center;
+  }
+}
+
+/* RTL Layout support */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="rtl"] .privacy-section ul li {
+  padding-left: 0;
+  padding-right: 1.75rem;
+}
+
+html[dir="rtl"] .privacy-section ul li::before {
+  left: auto;
+  right: 0;
+}
